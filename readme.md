@@ -1,6 +1,6 @@
 # MQTT to Telegram Rankings Bot with Execution Layer
 
-A sophisticated automated trading bot that monitors asset rankings via MQTT, manages Hummingbot trading instances, and reports activities through Telegram. The bot automatically opens and closes positions based on momentum signals from a Kalman filter-based ranking system.
+A sophisticated automated trading bot that monitors asset rankings via MQTT, manages Hummingbot trading instances, and reports activities through Telegram. The bot automatically opens and closes positions based on momentum signals from a ranking system.
 
 ## 🚀 Features
 
