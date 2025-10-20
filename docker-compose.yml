@@ -1,0 +1,54 @@
+# MQTT to Telegram Rankings Bot - Docker Compose Configuration
+
+services:
+  # Main bot service
+  mqtt-telegram-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hb_mqtt_signal_bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      # Mount logs directory for persistence
+      - ./logs:/app/logs
+      # Mount data directory if needed
+      - ./data:/app/data
+      # Mount config files
+      - ./conf:/app/conf:ro
+    networks:
+      - bot-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  ## Optional MQTT broker (Eclipse Mosquitto)
+  #mqtt-broker:
+  #  image: eclipse-mosquitto:2.0
+  #  container_name: mqtt-broker
+  #  restart: unless-stopped
+  #  ports:
+  #    - "1883:1883"
+  #    - "9001:9001"
+  #  volumes:
+  #    - ./mosquitto/config:/mosquitto/config
+  #    - ./mosquitto/data:/mosquitto/data
+  #    - ./mosquitto/log:/mosquitto/log
+  #  networks:
+  #    - bot-network
+  #  logging:
+  #    driver: "json-file"
+  #    options:
+  #      max-size: "10m"
+  #      max-file: "3"
+
+networks:
+  bot-network:
+    driver: bridge
+
+volumes:
+  mosquitto-data:
+  mosquitto-log:

@@ -1,0 +1,49 @@
+id: TWAP_order_controller_test
+# Hyperliquid TWAP Controller Configuration
+# This config file should be placed in the controller configs directory
+controller_name: twap_order_trade
+controller_type: directional_trading
+
+
+
+# Market Configuration
+connector_name: hyperliquid_perpetual
+trading_pair: SOL-USD
+
+# Trading Parameters
+total_amount_quote: 27 # Amount in USD to trade (will default to total_amount_quote)
+entry_side: BUY  # BUY or SELL
+min_notional_size: 12  # Minimum order size in USD
+
+# TWAP Configuration (matching TWAPExecutorConfig)
+batch_size_quote: 15 # Maximum batch size for orders
+batch_interval: 15   # Time between orders in seconds
+execution_strategy: MARKET  # # MARKET, LIMIT, LIMIT_MAKER, LIMIT_CHASER
+price_buffer_pct: 0.0025  # 0.25% buffer for limit orders
+
+# Hold Configuration
+hold_duration_seconds: 600  # 5 minutes hold time in test mode
+test_mode: true  # If true, automatically exits after hold_duration
+
+
+max_retries_per_batch: 3  # Maximum retries for each batch of orders
+leverage: 20  # Leverage to use (if supported)
+position_mode: ONEWAY  # hedge or one_way
+
+notifications_topic: hummmingbot/LS/notifications
+
+
+# parameters from teh DirectionalTradingConfig
+#cooldown_time: 1
+#candles_config: []
+#
+#
+#max_executors_per_side: 10
+#
+#stop_loss: 0.5
+#take_profit: 2
+#take_profit_order_type: 2
+#time_limit: 604800
+#trailing_stop:
+#  activation_price: 0.5
+#  trailing_delta: 0.05

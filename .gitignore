@@ -1,0 +1,106 @@
+# MQTT to Telegram Rankings Bot - Git Ignore File
+
+# Environment files (CRITICAL - contains secrets)
+.env
+.env.*
+!.env.docker.example
+env_template_filled.sh
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Logs
+*.log
+logs/
+mqtt_telegram_execution_bot.log*
+
+# Data files
+*.csv
+top100_by_marketcap.csv
+data/
+tmp/
+temp/
+*.tmp
+*.temp
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Docker runtime files
+.docker/
+docker-data/
+mqtt/data/
+mqtt/logs/
+mosquitto/data/
+mosquitto/log/
+
+# Backup files
+*.bak
+*.backup
+
+# Local development and test files
+local_*
+test_local_*
+sandbox/
+
+# Runtime files
+*.pid
+*.lock
+
+# Jupyter notebooks (if any)
+.ipynb_checkpoints/
+*.ipynb
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json

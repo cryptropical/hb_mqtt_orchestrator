@@ -1,0 +1,106 @@
+# MQTT to Telegram Rankings Bot - Docker Ignore File
+# Exclude files and directories from Docker build context
+
+# Version Control
+.git
+.gitignore
+.gitattributes
+
+# Environment files (secrets)
+.env
+.env.*
+!.env.docker.example
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Logs
+logs/
+*.log
+mqtt_telegram_execution_bot.log*
+
+# Data and temporary files
+data/
+tmp/
+temp/
+*.tmp
+*.temp
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Documentation build
+docs/_build/
+docs/build/
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Docker files (if building within container)
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# Local development files
+local_*
+test_*
+example_*
+sandbox/
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Runtime files
+*.pid
+*.lock
