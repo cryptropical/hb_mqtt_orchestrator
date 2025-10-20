@@ -287,5 +287,5 @@ This bot is for educational purposes. Trading cryptocurrencies carries significa
 ---
 
 **Version**: 1.0.0  
-**Author**: Your Name  
-**Last Updated**: September 2024
+**Author**: Cryptropical 
+**Last Updated**: September 2025
